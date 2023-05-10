@@ -19,7 +19,7 @@ class TestAPI(unittest.TestCase):
                 assert 'name' in profile
                 assert 'about' in profile
                 assert 'image' in profile
-                git 
+                 
     def setUp(self):
         self.client = api.test_client()
         self.response = self.client.get('/profile')

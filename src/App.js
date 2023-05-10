@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import axios from "axios";
 import './App.css';
 
 
@@ -11,10 +10,8 @@ function App() {
 
   function getData() {
 
-    axios({
-      method: "GET",
-      url: "/profile",
-    }).then((response) => {
+    fetch('/profile')
+    .then((response) => {
       const res = response.data
       
       setProfileData(({
